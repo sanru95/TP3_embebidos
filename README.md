@@ -74,10 +74,24 @@ En este ejemplo se utiliza vApplicationIdleHook(), que permite utilizar funcione
 
 ![](imagenes/ej7.PNG) 
 
-Se crean dos tareas peridicas (Tarea 1 y Tarea 2). Se ejecutan normalmente segun su prioridad y se bloquean. El tiempo restante hasta cumplir el time_slice, se ejecuta la tara Idle. Para utilizar esta tarea se utliza vApplicationIdleHook. En este ejemplo, en vApplicationIdleHook se incrementa un variable global y se manda a dormir al CPU hasta la siguiente interrupcion (__WFI()). En las tareas periodicas se imprime el valor de esta variable
+Se crean dos tareas peridicas (Tarea 1 y Tarea 2). Se ejecutan normalmente segun su prioridad y se bloquean. El tiempo restante hasta cumplir el time_slice, se ejecuta la tara Idle. Para utilizar esta tarea se utliza vApplicationIdleHook. En este ejemplo, en vApplicationIdleHook se incrementa un variable global y se manda a dormir al CPU hasta la siguiente interrupcion (__WFI()). En las tareas periodicas se imprime el valor de esta variable.
+
 El resultado se ve en la consola:
 
 ![](imagenes/ej7a.PNG) 
+
+## Ejemplo 8
+
+En este ejemplo se hace uso del cambio dinamico de priodidades.
+
+![](imagenes/ej8.PNG) 
+
+En este ejemplo de se crean dos tareas. La Tarea 1 tiene más prioridad e incrementa la prioridad de la Tarea 2 cada vez que se ejecuta. La Tarea 2 baja su misma prioridad cada vez que se le asigna el CPU. Cuando arranca el programa, el kernel asigna el CPU a la Tarea 1, la cual lee su propia prioridad con uxTaskPriorityGet() y asigna a la Tarea 2 esa priorida más uno con vTaskPrioritySet(). En ese momento se genera un cambio de contexto y la tarea de mayor prioridad es ejecutada. Entonces se ejecuta Tarea 2, ya que ahora tiene mayor prioridad que la Tarea 1. Al igual que la Tarea 1, la Tarea 2 lee su prioridad y se baja en dos unidades. De esta manera pasa a ser de menos prioridad que la Tarea 1. En este momento el kernel cambia de contexto y el ciclo comienza de nuevo. Se remarca que un cambio de time_slice no generaria un cambio en el funcionamiento del programa ya que se tiene un cambio continuo de contexto entre dos tareas.
+
+Por cada llamado de las tareas se imprime un string por la consola. El resultado se ve en la siguiente imagen. 
+
+
+![](imagenes/ej8a.PNG) 
 
 
 

@@ -49,7 +49,7 @@
 #define EXAMPLE_8 (8)		/* Changing task priorities */
 #define EXAMPLE_9 (9)		/* Deleting tasks */
 
-#define TEST (EXAMPLE_7)
+#define TEST (EXAMPLE_8)
 
 /*****************************************************************************
  * Public types/enumerations/variables
