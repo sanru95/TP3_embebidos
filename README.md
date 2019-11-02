@@ -2,7 +2,7 @@
 
 ## 2- Ejemplos 1 al 9
 
-## Ejemplo 1
+### Ejemplo 1
 
 A continuacion se observa el diagrama temporal de la distribución del tiempo del CPU:
 
@@ -14,7 +14,7 @@ En caso del time slice de 1ms a la salida de la consola se observa el siguiente 
 Esto se debe a que durante el envio de un string, debido a la velocidad del puerto serial, no se llega a enviar todo el mensaje en 1mS. Por eso, los mensajes de las tareas de ven cortados y pisado por la otra tarea. Para corregir esto se extiende el time_slice a 100mS y se observa la siguiente salida:
 ![](imagenes/ej1b.PNG)  
 
-## Ejemplo 2
+### Ejemplo 2
 
 Este ejemplo es similar al anterior:
 
@@ -23,7 +23,7 @@ Este ejemplo es similar al anterior:
 Sin embargo las funcion que corre en las tareas es la misma para ambas tareas, con la diferencia de que se pasa un parametro distinto a la hora de crearlas. Ambas tareas se crean con la misma priodidad, como en el ejemplo 1. Ese parametro en este caso es el string que identifica el nombre de la tarea. La tareas cuentas con un delay implementado de manera ineficiente con un ciclo for. Se tiene el mismo problema que en el ejercicio anterior con la salida por consola.
 
 
-## Ejemplo 3
+### Ejemplo 3
 A continuacion se observa el diagrama temporal de la distribución del tiempo del CPU:
 
 ![](imagenes/ej3.PNG) 
@@ -32,7 +32,7 @@ Este ejercicio es totalmente igual al ejericicio anterior, con la diferencia del
 
 ![](imagenes/ej3a.PNG) 
 
-## Ejemplo 4
+### Ejemplo 4
 
 En este ejercicio vTaskDelay(). 
 
@@ -42,7 +42,7 @@ Se crean dos tareas que realizan lo mismo que en los ejercicios anteriores. La t
 
 ![](imagenes/ej4a.PNG) 
 
-## Ejemplo 5
+### Ejemplo 5
 
 En este ejercicio vTaskDelayUntil().
 
@@ -56,7 +56,7 @@ La salida por consola es la siguiente:
 
 ![](imagenes/ej5a.PNG) 
 
-## Ejemplo 6
+### Ejemplo 6
 
 En este ejemplo se combina el uso de dos tareas continuas (Tarea 1 y 2) y una periodica (Tarea 3):
 
@@ -68,7 +68,7 @@ La tarea periodica tiene más prioridad que las continuas, las cuales tienen mis
 
 Se observa que la impresion del mensaje de la tarea 3 es mucho más frecuente, debido a que el delay implemetado por un ciclo for en las tareas continuas es mayor a 10mS. Tambien se observa que la función.periodica se ejecuta en el medio de una continua, haciendo que el mensaje de la continua se vea interrumpido.
 
-## Ejemplo 7
+### Ejemplo 7
 
 En este ejemplo se utiliza vApplicationIdleHook(), que permite utilizar funciones en la tarea Idle
 
@@ -80,7 +80,7 @@ El resultado se ve en la consola:
 
 ![](imagenes/ej7a.PNG) 
 
-## Ejemplo 8
+### Ejemplo 8
 
 En este ejemplo se hace uso del cambio dinamico de priodidades.
 
@@ -92,7 +92,7 @@ Por cada llamado de las tareas se imprime un string por la consola. El resultado
 
 ![](imagenes/ej8a.PNG) 
 
-## Ejemplo 9
+### Ejemplo 9
 
 En esta tarea se implenta la creación y destrucción de tareas de manera dinámica con xTaskCreate() y vTaskDelete(). El siguiente diagrama de tiempo no está en escala, en el sentido que la demora de 100mS de la Tarea 1 está representada como 2mS por simplificación.
 
@@ -102,4 +102,16 @@ En este ejemplo se crea solo la Tarea 1, la cual cada 100mS crea a la Tarea 2, c
 
 ![](imagenes/ej9a.PNG) 
 
+## 3- Ejemplos 10 al 16
 
+###Ejemplo 10
+
+En este ejemplo de se sincronizan dos tareas creadoras con una consumidora a traves de colas:
+
+![](imagenes/ej10.PNG) 
+
+La Tarea Receiver tiene más prioridad que las dos Tareas Sender. Cuando arranca el programa, el CPU es asignado a la Tarea Receiver, la cual queda en estado BLOCKED en la espera de que haya un dato en la cola (xQueueReceive()). Luego corre la Tarea Sender2 y carga en la cola un valor con xQueueSendToBack() y llama a taskYIELD() para deelgar el uso del CPU. En este momento el kernel sabes que deja de estar vacia la cola y asigna el CPU a la Tarea Receiver, la cual imprime el valor por consola y vuelve a esperar un valor, el cual se llena por Tarea Sender 1. 
+
+El resultado por consola es el siguiente:
+
+![](imagenes/ej10a.PNG) 
