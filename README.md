@@ -58,7 +58,7 @@ La salida por consola es la siguiente:
 
 ## Ejemplo 6
 
-En este ejemplo se combina el uso de dos tareas continuas (tarea 1 y 2) y una periodica (tarea 3):
+En este ejemplo se combina el uso de dos tareas continuas (Tarea 1 y 2) y una periodica (Tarea 3):
 
 ![](imagenes/ej6.PNG) 
 
@@ -66,7 +66,7 @@ La tarea periodica tiene más prioridad que las continuas, las cuales tienen mis
 
 ![](imagenes/ej6a.PNG) 
 
-Se observa que la impresion del mensaje de la tarea 3 es mucho más frecuente, debido a que el delay implemetado por un ciclo for en las tareas continuas es mayor a 10mS. Tambien se observa que la funcion periodica se ejecuta en el medio de una continua, haciendo que el mensaje de la continua se vea interrumpido.
+Se observa que la impresion del mensaje de la tarea 3 es mucho más frecuente, debido a que el delay implemetado por un ciclo for en las tareas continuas es mayor a 10mS. Tambien se observa que la función.periodica se ejecuta en el medio de una continua, haciendo que el mensaje de la continua se vea interrumpido.
 
 ## Ejemplo 7
 
@@ -90,10 +90,16 @@ En este ejemplo de se crean dos tareas. La Tarea 1 tiene más prioridad e increm
 
 Por cada llamado de las tareas se imprime un string por la consola. El resultado se ve en la siguiente imagen. 
 
-
 ![](imagenes/ej8a.PNG) 
 
+## Ejemplo 9
 
+En esta tarea se implenta la creación y destrucción de tareas de manera dinámica con xTaskCreate() y vTaskDelete(). El siguiente diagrama de tiempo no está en escala, en el sentido que la demora de 100mS de la Tarea 1 está representada como 2mS por simplificación.
 
+![](imagenes/ej9.PNG) 
+
+En este ejemplo se crea solo la Tarea 1, la cual cada 100mS crea a la Tarea 2, con más prioridad que la propia e imprime un mensaje por consola. Cuando se ejecuta la Tarea 2, esta no hace más que imprimir un mensaje y destruirse. El resultado por consola es el siguiente:
+
+![](imagenes/ej9a.PNG) 
 
 
