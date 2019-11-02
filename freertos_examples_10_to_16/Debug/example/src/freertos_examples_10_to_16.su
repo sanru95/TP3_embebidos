@@ -1,4 +1,4 @@
 freertos_examples_10_to_16.c:61:13:prvSetupHardware	8	static
-freertos_examples_10_to_16.c:85:13:vSenderTask	24	static
-freertos_examples_10_to_16.c:125:13:vReceiverTask	32	static
-freertos_examples_10_to_16.c:177:5:main	24	static
+freertos_examples_10_to_16.c:251:13:vSenderTask	24	static
+freertos_examples_10_to_16.c:288:13:vReceiverTask	24	static
+freertos_examples_10_to_16.c:345:5:main	24	static

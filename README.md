@@ -104,7 +104,7 @@ En este ejemplo se crea solo la Tarea 1, la cual cada 100mS crea a la Tarea 2, c
 
 ## 3- Ejemplos 10 al 16
 
-###Ejemplo 10
+### Ejemplo 10
 
 En este ejemplo de se sincronizan dos tareas creadoras con una consumidora a traves de colas:
 
@@ -115,3 +115,15 @@ La Tarea Receiver tiene más prioridad que las dos Tareas Sender. Cuando arranca
 El resultado por consola es el siguiente:
 
 ![](imagenes/ej10a.PNG) 
+
+### Ejemplo 11
+
+En este ejemplo se pasan estructuras por las colas para sincronizar las tareas. 
+
+![](imagenes/ej11.PNG) 
+
+Este ejercicio es similar al anterior, sin embargo ahora las Tareas Sender tienen mayor prioridad que la Tares Receiver. Es por eso que se ejecutan alternadamente hasta llenar la cola. En este momento entra en escena el ultimo parametro de xQueueSendToBack(), el cual indica cuanto tiempo tiene que permanecer en BLOCKED la tareas hasta q haya espacio. Cuando ambas Sender quedan en BLOCKED, se ejecuta Receiver, la cual imprime un mensaje y libera en lugar en la cola. En este momento una de las Sender llena este espacio y se repite el ciclo. Ademas, ahora por la cola no se pasa solo el valor, sino una estructura que contiene el valor y un numero indicando el origen (cual de las Tareas Sender agregó el dato).
+
+El resultado por pantalla es el siguiente:
+
+![](imagenes/ej11a.PNG) 

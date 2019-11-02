@@ -47,7 +47,7 @@
 #define EXAMPLE_15 (15)		/* Re-writing vPrintString() to use a semaphore */
 #define EXAMPLE_16 (16)		/* Re-writing vPrintString() to use a gatekeeper task */
 
-#define TEST (EXAMPLE_10)
+#define TEST (EXAMPLE_11)
 
 /*****************************************************************************
  * Public types/enumerations/variables
@@ -114,7 +114,6 @@ static void vSenderTask(void *pvParameters)
 			 * be an error as the queue should never contain more than one item! */
 			DEBUGOUT("Could not send to the queue.\r\n");
 		}
-		DEBUGOUT("Send %d\r\n", lValueToSend);
 
 		/* Allow the other sender task to execute. */
 		taskYIELD();
@@ -271,6 +270,7 @@ static void vSenderTask(void *pvParameters)
 		 * will become full.  Items will only be removed from the queue when both
 		 * sending tasks are in the Blocked state.. */
 		xStatus = xQueueSendToBack(xQueue, pvParameters, xTicksToWait);
+		DEBUGOUT("A\r\n");
 
 		if (xStatus != pdPASS) {
 			/* We could not write to the queue because it was full - this must
