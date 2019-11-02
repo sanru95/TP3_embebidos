@@ -1,3 +1,4 @@
 freertos_examples_1_to_9.c:63:13:prvSetupHardware	8	static
-freertos_examples_1_to_9.c:358:13:vTaskFunction	24	static
-freertos_examples_1_to_9.c:387:5:main	24	static
+freertos_examples_1_to_9.c:524:13:vContinuousProcessingTask	24	static
+freertos_examples_1_to_9.c:556:13:vPeriodicTask	24	static
+freertos_examples_1_to_9.c:590:5:main	24	static
