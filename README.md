@@ -66,8 +66,18 @@ La tarea periodica tiene más prioridad que las continuas, las cuales tienen mis
 
 ![](imagenes/ej6a.PNG) 
 
-Se observa que la impresion del mensaje de la tarea 3 es mucho más frecuente, debido a que el delay implemetado por un ciclo for en las tareas continuas es mayor a 10mS. 
+Se observa que la impresion del mensaje de la tarea 3 es mucho más frecuente, debido a que el delay implemetado por un ciclo for en las tareas continuas es mayor a 10mS. Tambien se observa que la funcion periodica se ejecuta en el medio de una continua, haciendo que el mensaje de la continua se vea interrumpido.
 
+## Ejemplo 7
+
+En este ejemplo se utiliza vApplicationIdleHook(), que permite utilizar funciones en la tarea Idle
+
+![](imagenes/ej7.PNG) 
+
+Se crean dos tareas peridicas (Tarea 1 y Tarea 2). Se ejecutan normalmente segun su prioridad y se bloquean. El tiempo restante hasta cumplir el time_slice, se ejecuta la tara Idle. Para utilizar esta tarea se utliza vApplicationIdleHook. En este ejemplo, en vApplicationIdleHook se incrementa un variable global y se manda a dormir al CPU hasta la siguiente interrupcion (__WFI()). En las tareas periodicas se imprime el valor de esta variable
+El resultado se ve en la consola:
+
+![](imagenes/ej7a.PNG) 
 
 
 
