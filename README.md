@@ -171,6 +171,17 @@ En este ejemplo se utiliza un Mutex para proteger un recurso compartido, en este
 Se tiene dos tareas que imprimen por consola un mensaje largo cada un tiempo aleatorio. En caso de no usar una proteccion del recurso, los mensajes por consola se verian partidos por la mitad, pisados. En este ejemplo se utiliza un Mutex, que hace que una tarea no pueda acceder a la UART hasta que la otra tarea lo haya liberado, permitiendo que dos tares puedan acceder de manera ordenada a un recurso unico.
 El resultado por consola es el siguiente:
 
-
 ![](imagenes/ej15a.PNG) 
+
+### Ejemplo 16
+
+En este ejercicio se tienen tres tareas que producen mensajes y una que se encarga de administrar el recurso de impresion por consola:
+
+![](imagenes/ej16.PNG) 
+
+Las Tareas Print1 y Print2 agregan, cada un tiempo aleatorio, strings a la cola. En este ejemplo se utiliza vApplicationTickHook(), la cual cuenta hasta 200 y agrega un mensaje a la cola con xQueueSendToFrontFromISR(), ya que se ejecuta en en la interrupcion del SysTick. La Tarea Gatekeeper se encuentra bloqueada hasta que la cola de mensajes deja de estar vacia. En este momento imprime el mensaje por consola. Para este ejemplo se tuvo que modificar configUSE_TICK_HOOK a 1 para que funcione como se espera.
+El resultado por consola es el siguiente:
+
+![](imagenes/ej16a.PNG) 
+
 

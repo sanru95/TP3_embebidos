@@ -47,7 +47,7 @@
 #define EXAMPLE_15 (15)		/* Re-writing vPrintString() to use a semaphore */
 #define EXAMPLE_16 (16)		/* Re-writing vPrintString() to use a gatekeeper task */
 
-#define TEST (EXAMPLE_15)
+#define TEST (EXAMPLE_16)
 
 /*****************************************************************************
  * Public types/enumerations/variables
@@ -1099,7 +1099,7 @@ static void prvStdioGatekeeperTask(void *pvParameters)
 		DEBUGOUT(cBuffer);
 
 		/* Now simply go back to wait for the next message. */
-	}
+		}
 }
 
 

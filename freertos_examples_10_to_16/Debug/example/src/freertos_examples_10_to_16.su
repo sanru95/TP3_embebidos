@@ -1,4 +1,5 @@
 freertos_examples_10_to_16.c:61:13:prvSetupHardware	8	static
-freertos_examples_10_to_16.c:958:13:prvNewPrintString	16	static
-freertos_examples_10_to_16.c:982:13:prvPrintTask	24	static
-freertos_examples_10_to_16.c:1012:5:main	24	static
+freertos_examples_10_to_16.c:1081:13:prvStdioGatekeeperTask	24	static
+freertos_examples_10_to_16.c:1106:13:prvPrintTask	24	static
+freertos_examples_10_to_16.c:1132:6:vApplicationTickHook	16	static
+freertos_examples_10_to_16.c:1159:5:main	24	static
