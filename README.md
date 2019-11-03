@@ -211,6 +211,8 @@ El resultado por consola es el siguiente:
 
 ## Aplicación 1
 
+Todas las aplicaciones se encuentran en  [freertos_app.c](./freertos_examples_10_to_16/example/src).
+
 En la siguiente aplicación se tiene el siguiente diagrama temporal:
 
 ![](imagenes/app1.PNG) 
