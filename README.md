@@ -162,5 +162,15 @@ EL resultado de la consola es el siguiente:
  
 ![](imagenes/ej14a.PNG) 
 
-## Ejemplo 15
+### Ejemplo 15
+
+En este ejemplo se utiliza un Mutex para proteger un recurso compartido, en este caso la UART para imprimir por cola
+
+![](imagenes/ej15.PNG) 
+
+Se tiene dos tareas que imprimen por consola un mensaje largo cada un tiempo aleatorio. En caso de no usar una proteccion del recurso, los mensajes por consola se verian partidos por la mitad, pisados. En este ejemplo se utiliza un Mutex, que hace que una tarea no pueda acceder a la UART hasta que la otra tarea lo haya liberado, permitiendo que dos tares puedan acceder de manera ordenada a un recurso unico.
+El resultado por consola es el siguiente:
+
+
+![](imagenes/ej15a.PNG) 
 
