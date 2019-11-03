@@ -222,3 +222,13 @@ El reusltado por consola es el siguiente:
 ![](imagenes/app1a.PNG) 
 
 ## Aplicación 2
+
+En la siguiente aplicación se tiene el siguiente diagrama temporal:
+
+![](imagenes/app1.PNG)
+
+La aplicación es similar a la anterior, con la diferencia fundamental que la Tarea 2 ahora se sincroniza con la ISR mediante una cola y la Tarea 2 se sincroniza con la Tarea 3 mediante un semaforo binario.
+
+El reusltado por consola es el siguiente:
+
+![](imagenes/app2a.PNG) 

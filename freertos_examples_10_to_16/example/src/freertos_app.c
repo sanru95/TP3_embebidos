@@ -5,7 +5,7 @@
 #include "queue.h"
 #include "semphr.h"
 
-#define APP (3)
+#define APP (2)
 
 
 /* Sets up system hardware */
