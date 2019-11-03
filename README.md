@@ -10,7 +10,16 @@
 | DEBUGOUT()            | board_api.h                | Imprime por consola el string pasado como paràmetro                                               | UART                  |
 | xTaskCreate()         | task.c                     | Crea la tarea segun los paràmetros pasados y la agrega a la listas de tareas listas para correr   |                       |
 | vTaskStartScheduler() | task.c                     | Inicia el kernel. A partir de este punto el kernel tiene control a quien le asigna tiempo del CPU |                       |
-| Board_LED_Set()       | board.c                    | Setea el estado del LED segun los paràametros pasados                                             | LED = OFF || LED = ON |
+| Board_LED_Set()       | board.c                    | Setea el estado del LED segun los paràametros pasados                                             | LED = OFF o LED = ON |
+
+### Variables
+
+| Variable             | Tipo                   | Archivo                    | Descripción                                                          |
+|----------------------|------------------------|----------------------------|----------------------------------------------------------------------|
+| mainDELAY_LOOP_COUNT | MACRO                  | freertos_examples_1_to_9.c | Macro que define el largo de la demora implementada por el ciclo for |
+| pcTextForMain        | const char *           | freertos_examples_1_to_9.c | String que guarda el nombre del ejemplo                              |
+| vTask                | Prototipo              | freertos_examples_1_to_9.c | Prototipo de la tarea                                                |
+| ul                   | volatile unsigned long | freertos_examples_1_to_9.c | Valor utilizado para implementar la demora                           |
 
 ## 2- Ejemplos 1 al 9
 
