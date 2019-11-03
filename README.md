@@ -1,5 +1,17 @@
 # TP3- Uso de FreeRTOS
 
+## 1- Archivos y tipos de datos
+
+### Funciones
+
+| Función               | Archivo                    | Descripción                                                                                       | Hardware              |
+|-----------------------|----------------------------|---------------------------------------------------------------------------------------------------|-----------------------|
+| prvSetupHardware()    | freertos_examples_1_to_9.c | Inicia los periféricos, incluidos el Clock y el LED                                               | LED = OFF             |
+| DEBUGOUT()            | board_api.h                | Imprime por consola el string pasado como paràmetro                                               | UART                  |
+| xTaskCreate()         | task.c                     | Crea la tarea segun los paràmetros pasados y la agrega a la listas de tareas listas para correr   |                       |
+| vTaskStartScheduler() | task.c                     | Inicia el kernel. A partir de este punto el kernel tiene control a quien le asigna tiempo del CPU |                       |
+| Board_LED_Set()       | board.c                    | Setea el estado del LED segun los paràametros pasados                                             | LED = OFF || LED = ON |
+
 ## 2- Ejemplos 1 al 9
 
 ### Ejemplo 1
@@ -20,7 +32,7 @@ Este ejemplo es similar al anterior:
 
 ![](imagenes/ej1.PNG)
 
-Sin embargo las funcion que corre en las tareas es la misma para ambas tareas, con la diferencia de que se pasa un parametro distinto a la hora de crearlas. Ambas tareas se crean con la misma priodidad, como en el ejemplo 1. Ese parametro en este caso es el string que identifica el nombre de la tarea. La tareas cuentas con un delay implementado de manera ineficiente con un ciclo for. Se tiene el mismo problema que en el ejercicio anterior con la salida por consola.
+Sin embargo las función que corre en las tareas es la misma para ambas tareas, con la diferencia de que se pasa un parametro distinto a la hora de crearlas. Ambas tareas se crean con la misma priodidad, como en el ejemplo 1. Ese parametro en este caso es el string que identifica el nombre de la tarea. La tareas cuentas con un delay implementado de manera ineficiente con un ciclo for. Se tiene el mismo problema que en el ejercicio anterior con la salida por consola.
 
 
 ### Ejemplo 3
@@ -38,7 +50,7 @@ En este ejercicio vTaskDelay().
 
 ![](imagenes/ej4.PNG) 
 
-Se crean dos tareas que realizan lo mismo que en los ejercicios anteriores. La tarea 2 tiene prioridad superior que la 1. En la funcion se conmuta un LED, se imprime el mensaje por consola y se ejecuta vTaskDelay(). Esta función coloca en estado BLOCKED a las tareas hasta que transcurre el tiempo pasado a la misma. La tarea corre hasta llegar a esta función y delega el uso del CPU. Cuando pasa el tiempo, la tarea pasa a READY y el kernel llama a la tarea 2, que tiene más prioridad. Cuando esta termina, se ejecuta la tarea 1. Esto se observa en la terminal:
+Se crean dos tareas que realizan lo mismo que en los ejercicios anteriores. La tarea 2 tiene prioridad superior que la 1. En la función se conmuta un LED, se imprime el mensaje por consola y se ejecuta vTaskDelay(). Esta función coloca en estado BLOCKED a las tareas hasta que transcurre el tiempo pasado a la misma. La tarea corre hasta llegar a esta función y delega el uso del CPU. Cuando pasa el tiempo, la tarea pasa a READY y el kernel llama a la tarea 2, que tiene más prioridad. Cuando esta termina, se ejecuta la tarea 1. Esto se observa en la terminal:
 
 ![](imagenes/ej4a.PNG) 
 

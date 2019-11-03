@@ -1450,7 +1450,6 @@ Discarded input sections
  .group         0x00000000        0xc ./example/src/freertos_app.o
  .group         0x00000000        0xc ./example/src/freertos_app.o
  .group         0x00000000        0xc ./example/src/freertos_app.o
- .group         0x00000000        0xc ./example/src/freertos_app.o
  .text          0x00000000        0x0 ./example/src/freertos_app.o
  .data          0x00000000        0x0 ./example/src/freertos_app.o
  .bss           0x00000000        0x0 ./example/src/freertos_app.o
@@ -3510,7 +3509,7 @@ END GROUP
  *(.rodata.$Flash2.*)
  *(.rodata.$MFlashB512.*)
 
-.text           0x1a000000     0x5db8
+.text           0x1a000000     0x5d7c
  FILL mask 0xff
                 0x1a000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -3519,19 +3518,19 @@ END GROUP
                 0x1a000114                . = ALIGN (0x4)
                 0x1a000114                __section_table_start = .
                 0x1a000114                __data_section_table = .
-                0x1a000114        0x4 LONG 0x1a005db8 LOADADDR (.data)
+                0x1a000114        0x4 LONG 0x1a005d7c LOADADDR (.data)
                 0x1a000118        0x4 LONG 0x10000000 ADDR (.data)
                 0x1a00011c        0x4 LONG 0x8 SIZEOF (.data)
-                0x1a000120        0x4 LONG 0x1a005db8 LOADADDR (.data_RAM2)
+                0x1a000120        0x4 LONG 0x1a005d7c LOADADDR (.data_RAM2)
                 0x1a000124        0x4 LONG 0x10080000 ADDR (.data_RAM2)
                 0x1a000128        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x1a00012c        0x4 LONG 0x1a005db8 LOADADDR (.data_RAM3)
+                0x1a00012c        0x4 LONG 0x1a005d7c LOADADDR (.data_RAM3)
                 0x1a000130        0x4 LONG 0x20000000 ADDR (.data_RAM3)
                 0x1a000134        0x4 LONG 0x0 SIZEOF (.data_RAM3)
-                0x1a000138        0x4 LONG 0x1a005db8 LOADADDR (.data_RAM4)
+                0x1a000138        0x4 LONG 0x1a005d7c LOADADDR (.data_RAM4)
                 0x1a00013c        0x4 LONG 0x20008000 ADDR (.data_RAM4)
                 0x1a000140        0x4 LONG 0x0 SIZEOF (.data_RAM4)
-                0x1a000144        0x4 LONG 0x1a005db8 LOADADDR (.data_RAM5)
+                0x1a000144        0x4 LONG 0x1a005d7c LOADADDR (.data_RAM5)
                 0x1a000148        0x4 LONG 0x2000c000 ADDR (.data_RAM5)
                 0x1a00014c        0x4 LONG 0x0 SIZEOF (.data_RAM5)
                 0x1a000150                __data_section_table_end = .
@@ -3796,380 +3795,381 @@ END GROUP
                 0x1a001c0c       0x54 ./example/src/freertos_app.o
  .text.prvSetupHardware
                 0x1a001c60       0x18 ./example/src/freertos_app.o
- .text.vTask1   0x1a001c78       0x24 ./example/src/freertos_app.o
- .text.vTask2   0x1a001c9c       0x70 ./example/src/freertos_app.o
- .text.vTask3   0x1a001d0c       0x64 ./example/src/freertos_app.o
+ .text.vTask1   0x1a001c78       0x30 ./example/src/freertos_app.o
+ .text.vTask2   0x1a001ca8       0x78 ./example/src/freertos_app.o
+ .text.vTask3   0x1a001d20       0x48 ./example/src/freertos_app.o
  .text.prvSetupSoftwareInterrupt
-                0x1a001d70       0x16 ./example/src/freertos_app.o
- *fill*         0x1a001d86        0x2 ff
+                0x1a001d68       0x16 ./example/src/freertos_app.o
+ *fill*         0x1a001d7e        0x2 ff
  .text.DAC_IRQHandler
-                0x1a001d88       0x4c ./example/src/freertos_app.o
-                0x1a001d88                DAC_IRQHandler
- .text.main     0x1a001dd4       0xd0 ./example/src/freertos_app.o
-                0x1a001dd4                main
+                0x1a001d80       0x48 ./example/src/freertos_app.o
+                0x1a001d80                DAC_IRQHandler
+ .text.main     0x1a001dc8       0xd0 ./example/src/freertos_app.o
+                0x1a001dc8                main
  .text.SystemInit
-                0x1a001ea4       0x28 ./example/src/sysinit.o
-                0x1a001ea4                SystemInit
+                0x1a001e98       0x28 ./example/src/sysinit.o
+                0x1a001e98                SystemInit
  .text.Chip_SCU_PinMuxSet
-                0x1a001ecc       0x34 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a001ec0       0x34 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_ENET_RMIIEnable
-                0x1a001f00       0x28 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a001ef4       0x28 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_GPIO_SetPinState
-                0x1a001f28       0x38 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a001f1c       0x38 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_GPIO_GetPinState
-                0x1a001f60       0x36 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a001f54       0x36 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_GPIO_SetPinDIROutput
-                0x1a001f96       0x3e C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a001f8a       0x3e C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_GPIO_SetPinDIRInput
-                0x1a001fd4       0x40 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a001fc8       0x40 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_UART_TXEnable
-                0x1a002014       0x1a C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a002008       0x1a C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_UART_SendByte
-                0x1a00202e       0x1e C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a002022       0x1e C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_UART_ConfigData
-                0x1a00204c       0x1c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a002040       0x1c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_UART_ReadLineStatus
-                0x1a002068       0x18 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a00205c       0x18 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.__sys_write
-                0x1a002080       0x38 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a002080                __sys_write
+                0x1a002074       0x38 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a002074                __sys_write
  .text.Board_UART_Init
-                0x1a0020b8       0x24 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a0020b8                Board_UART_Init
+                0x1a0020ac       0x24 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a0020ac                Board_UART_Init
  .text.Board_Debug_Init
-                0x1a0020dc       0x30 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a0020dc                Board_Debug_Init
+                0x1a0020d0       0x30 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a0020d0                Board_Debug_Init
  .text.Board_UARTPutChar
-                0x1a00210c       0x34 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a00210c                Board_UARTPutChar
+                0x1a002100       0x34 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a002100                Board_UARTPutChar
  .text.Board_LED_Init
-                0x1a002140       0x5c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a002134       0x5c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Board_LED_Set
-                0x1a00219c       0x48 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a00219c                Board_LED_Set
+                0x1a002190       0x48 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a002190                Board_LED_Set
  .text.Board_LED_Test
-                0x1a0021e4       0x48 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a0021e4                Board_LED_Test
+                0x1a0021d8       0x48 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a0021d8                Board_LED_Test
  .text.Board_LED_Toggle
-                0x1a00222c       0x3c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a00222c                Board_LED_Toggle
+                0x1a002220       0x3c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a002220                Board_LED_Toggle
  .text.Board_Buttons_Init
-                0x1a002268       0x44 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a002268                Board_Buttons_Init
+                0x1a00225c       0x44 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a00225c                Board_Buttons_Init
  .text.Board_Init
-                0x1a0022ac       0x28 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a0022ac                Board_Init
+                0x1a0022a0       0x28 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a0022a0                Board_Init
  .text.Chip_SCU_PinMuxSet
-                0x1a0022d4       0x34 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a0022c8       0x34 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .text.Chip_SCU_SetPinMuxing
-                0x1a002308       0x4a C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- *fill*         0x1a002352        0x2 ff
+                0x1a0022fc       0x4a C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ *fill*         0x1a002346        0x2 ff
  .text.Chip_CREG_SetFlashAcceleration
-                0x1a002354       0x54 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a002348       0x54 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .text.Board_SetupMuxing
-                0x1a0023a8       0x14 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
-                0x1a0023a8                Board_SetupMuxing
+                0x1a00239c       0x14 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a00239c                Board_SetupMuxing
  .text.Board_SetupClocking
-                0x1a0023bc       0x84 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
-                0x1a0023bc                Board_SetupClocking
+                0x1a0023b0       0x84 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a0023b0                Board_SetupClocking
  .text.Board_SystemInit
-                0x1a002440       0x10 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
-                0x1a002440                Board_SystemInit
+                0x1a002434       0x10 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a002434                Board_SystemInit
  .text.SystemCoreClockUpdate
-                0x1a002450       0x18 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(chip_18xx_43xx.o)
-                0x1a002450                SystemCoreClockUpdate
- .text.ABS      0x1a002468       0x22 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
- *fill*         0x1a00248a        0x2 ff
+                0x1a002444       0x18 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(chip_18xx_43xx.o)
+                0x1a002444                SystemCoreClockUpdate
+ .text.ABS      0x1a00245c       0x22 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ *fill*         0x1a00247e        0x2 ff
  .text.pll_calc_divs
-                0x1a00248c      0x124 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a002480      0x124 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
  .text.pll_get_frac
-                0x1a0025b0      0x176 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a0025a4      0x176 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
  .text.Chip_Clock_GetDivRate
-                0x1a002726       0x40 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
- *fill*         0x1a002766        0x2 ff
+                0x1a00271a       0x40 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ *fill*         0x1a00275a        0x2 ff
  .text.Chip_Clock_FindBaseClock
-                0x1a002768       0x90 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a00275c       0x90 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
  .text.Chip_Clock_EnableCrystal
-                0x1a0027f8       0x70 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a0027f8                Chip_Clock_EnableCrystal
+                0x1a0027ec       0x70 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a0027ec                Chip_Clock_EnableCrystal
  .text.Chip_Clock_CalcMainPLLValue
-                0x1a002868       0xd8 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a002868                Chip_Clock_CalcMainPLLValue
+                0x1a00285c       0xd8 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a00285c                Chip_Clock_CalcMainPLLValue
  .text.Chip_Clock_GetMainPLLHz
-                0x1a002940       0xc0 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a002940                Chip_Clock_GetMainPLLHz
+                0x1a002934       0xc0 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a002934                Chip_Clock_GetMainPLLHz
  .text.Chip_Clock_GetDividerSource
-                0x1a002a00       0x40 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a002a00                Chip_Clock_GetDividerSource
+                0x1a0029f4       0x40 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a0029f4                Chip_Clock_GetDividerSource
  .text.Chip_Clock_GetDividerDivisor
-                0x1a002a40       0x38 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a002a40                Chip_Clock_GetDividerDivisor
+                0x1a002a34       0x38 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a002a34                Chip_Clock_GetDividerDivisor
  .text.Chip_Clock_GetClockInputHz
-                0x1a002a78      0x140 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a002a78                Chip_Clock_GetClockInputHz
+                0x1a002a6c      0x140 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a002a6c                Chip_Clock_GetClockInputHz
  .text.Chip_Clock_GetBaseClocktHz
-                0x1a002bb8       0x24 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a002bb8                Chip_Clock_GetBaseClocktHz
+                0x1a002bac       0x24 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a002bac                Chip_Clock_GetBaseClocktHz
  .text.Chip_Clock_SetBaseClock
-                0x1a002bdc       0x9c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a002bdc                Chip_Clock_SetBaseClock
+                0x1a002bd0       0x9c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a002bd0                Chip_Clock_SetBaseClock
  .text.Chip_Clock_GetBaseClock
-                0x1a002c78       0x4c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a002c78                Chip_Clock_GetBaseClock
+                0x1a002c6c       0x4c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a002c6c                Chip_Clock_GetBaseClock
  .text.Chip_Clock_EnableOpts
-                0x1a002cc4       0x7c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a002cc4                Chip_Clock_EnableOpts
+                0x1a002cb8       0x7c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a002cb8                Chip_Clock_EnableOpts
  .text.Chip_Clock_GetRate
-                0x1a002d40       0x88 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a002d40                Chip_Clock_GetRate
- .text.fpuInit  0x1a002dc8       0x74 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(fpu_init.o)
-                0x1a002dc8                fpuInit
+                0x1a002d34       0x88 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a002d34                Chip_Clock_GetRate
+ .text.fpuInit  0x1a002dbc       0x74 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(fpu_init.o)
+                0x1a002dbc                fpuInit
  .text.Chip_GPIO_Init
-                0x1a002e3c       0x14 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(gpio_18xx_43xx.o)
-                0x1a002e3c                Chip_GPIO_Init
+                0x1a002e30       0x14 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+                0x1a002e30                Chip_GPIO_Init
  .text.Chip_Clock_DisableMainPLL
-                0x1a002e50       0x20 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a002e44       0x20 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .text.Chip_Clock_SetupMainPLL
-                0x1a002e70       0x44 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a002e64       0x44 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .text.Chip_Clock_MainPLLLocked
-                0x1a002eb4       0x24 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a002ea8       0x24 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .text.Chip_SetupCoreClock
-                0x1a002ed8      0x15c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
-                0x1a002ed8                Chip_SetupCoreClock
+                0x1a002ecc      0x15c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a002ecc                Chip_SetupCoreClock
  .text.Chip_UART_TXDisable
-                0x1a003034       0x1a C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a003028       0x1a C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_SetupFIFOS
-                0x1a00304e       0x1c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a003042       0x1c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_ConfigData
-                0x1a00306a       0x1c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a00305e       0x1c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_EnableDivisorAccess
-                0x1a003086       0x20 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a00307a       0x20 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_DisableDivisorAccess
-                0x1a0030a6       0x20 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a00309a       0x20 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_SetDivisorLatches
-                0x1a0030c6       0x28 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
- *fill*         0x1a0030ee        0x2 ff
+                0x1a0030ba       0x28 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ *fill*         0x1a0030e2        0x2 ff
  .text.Chip_UART_GetIndex
-                0x1a0030f0       0x68 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a0030e4       0x68 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_Init
-                0x1a003158       0x84 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
-                0x1a003158                Chip_UART_Init
+                0x1a00314c       0x84 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a00314c                Chip_UART_Init
  .text.Chip_UART_SetBaudFDR
-                0x1a0031dc      0x16c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
-                0x1a0031dc                Chip_UART_SetBaudFDR
- .text.__main   0x1a003348        0xe c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(_cr__main.o)
-                0x1a003348                __main
- .text.memcpy   0x1a003356        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(memcpy.o)
-                0x1a003356                memcpy
- .text.memset   0x1a00335a        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(memset.o)
-                0x1a00335a                memset
- *fill*         0x1a00335e        0x2 ff
- .text.malloc   0x1a003360       0xc8 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(alloc.o)
-                0x1a003360                malloc
- .text.free     0x1a003428       0x30 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(alloc.o)
-                0x1a003428                free
+                0x1a0031d0      0x16c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a0031d0                Chip_UART_SetBaudFDR
+ .text.__main   0x1a00333c        0xe c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(_cr__main.o)
+                0x1a00333c                __main
+ .text.memcpy   0x1a00334a        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(memcpy.o)
+                0x1a00334a                memcpy
+ .text.memset   0x1a00334e        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(memset.o)
+                0x1a00334e                memset
+ *fill*         0x1a003352        0x2 ff
+ .text.malloc   0x1a003354       0xc8 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(alloc.o)
+                0x1a003354                malloc
+ .text.free     0x1a00341c       0x30 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(alloc.o)
+                0x1a00341c                free
  .text._Csys_alloc
-                0x1a003458       0x20 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(alloc.o)
-                0x1a003458                _Csys_alloc
+                0x1a00344c       0x20 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(alloc.o)
+                0x1a00344c                _Csys_alloc
  .text.fp_round
-                0x1a003478       0x4e c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fpprintf.o)
+                0x1a00346c       0x4e c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fpprintf.o)
  .text.pr_dec.constprop.1
-                0x1a0034c6       0x26 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fpprintf.o)
- .text.sprintf  0x1a0034ec       0x6c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fpprintf.o)
-                0x1a0034ec                sprintf
+                0x1a0034ba       0x26 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fpprintf.o)
+ .text.sprintf  0x1a0034e0       0x6c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fpprintf.o)
+                0x1a0034e0                sprintf
+ *fill*         0x1a00354c        0x4 ff
  .text.fp_display
-                0x1a003558      0x954 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fpprintf.o)
+                0x1a003550      0x954 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fpprintf.o)
  .text.vsnprintf
-                0x1a003eac       0x68 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fpprintf.o)
-                0x1a003eac                vsnprintf
- .text.printf   0x1a003f14       0x54 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fpprintf.o)
-                0x1a003f14                printf
- .text._initio  0x1a003f68       0x78 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(initio.o)
-                0x1a003f68                _initio
+                0x1a003ea4       0x68 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fpprintf.o)
+                0x1a003ea4                vsnprintf
+ .text.printf   0x1a003f0c       0x54 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fpprintf.o)
+                0x1a003f0c                printf
+ .text._initio  0x1a003f60       0x78 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(initio.o)
+                0x1a003f60                _initio
  .text.__vfprintf
-                0x1a003fe0      0xbe0 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(printf.o)
-                0x1a003fe0                __vfprintf
- .text.setvbuf  0x1a004bc0       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(setvbuf.o)
-                0x1a004bc0                setvbuf
- .text.strlen   0x1a004c00       0x4c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(strlen.o)
-                0x1a004c00                strlen
- .text._sbrk    0x1a004c4c       0x3c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_cr_sbrk.o)
-                0x1a004c4c                _sbrk
+                0x1a003fd8      0xbe0 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(printf.o)
+                0x1a003fd8                __vfprintf
+ .text.setvbuf  0x1a004bb8       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(setvbuf.o)
+                0x1a004bb8                setvbuf
+ .text.strlen   0x1a004bf8       0x4c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(strlen.o)
+                0x1a004bf8                strlen
+ .text._sbrk    0x1a004c44       0x3c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_cr_sbrk.o)
+                0x1a004c44                _sbrk
  .text._deferredlazyseek
-                0x1a004c88       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_deferredlazyseek.o)
-                0x1a004c88                _deferredlazyseek
+                0x1a004c80       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_deferredlazyseek.o)
+                0x1a004c80                _deferredlazyseek
  .text.__flsbuf
-                0x1a004cc8      0x140 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_deferredlazyseek.o)
-                0x1a004cc8                __flsbuf
- .text._fdopen  0x1a004e08       0x68 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_fdopen.o)
-                0x1a004e08                _fdopen
- .text._fflush  0x1a004e70       0x52 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_fflush.o)
-                0x1a004e70                _fflush
- .text._frexpl  0x1a004ec2       0x56 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_frexpl.o)
-                0x1a004ec2                _frexpl
- .text._ldexpl  0x1a004f18       0x48 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_ldexpl.o)
-                0x1a004f18                _ldexpl
+                0x1a004cc0      0x140 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_deferredlazyseek.o)
+                0x1a004cc0                __flsbuf
+ .text._fdopen  0x1a004e00       0x68 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_fdopen.o)
+                0x1a004e00                _fdopen
+ .text._fflush  0x1a004e68       0x52 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_fflush.o)
+                0x1a004e68                _fflush
+ .text._frexpl  0x1a004eba       0x56 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_frexpl.o)
+                0x1a004eba                _frexpl
+ .text._ldexpl  0x1a004f10       0x48 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_ldexpl.o)
+                0x1a004f10                _ldexpl
  .text._Cwritebuf
-                0x1a004f60       0x6c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_writebuf.o)
-                0x1a004f60                _Cwritebuf
- .text.fclose   0x1a004fcc       0x58 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fclose.o)
-                0x1a004fcc                fclose
- .text.fflush   0x1a005024       0x44 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fflush.o)
-                0x1a005024                fflush
- .text.fseek    0x1a005068      0x100 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fseek.o)
-                0x1a005068                fseek
- .text.ftell    0x1a005168       0x48 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(ftell.o)
-                0x1a005168                ftell
- .text.remove   0x1a0051b0       0x14 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(remove.o)
-                0x1a0051b0                remove
+                0x1a004f58       0x6c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_writebuf.o)
+                0x1a004f58                _Cwritebuf
+ .text.fclose   0x1a004fc4       0x58 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fclose.o)
+                0x1a004fc4                fclose
+ .text.fflush   0x1a00501c       0x44 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fflush.o)
+                0x1a00501c                fflush
+ .text.fseek    0x1a005060      0x100 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fseek.o)
+                0x1a005060                fseek
+ .text.ftell    0x1a005160       0x48 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(ftell.o)
+                0x1a005160                ftell
+ .text.remove   0x1a0051a8       0x14 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(remove.o)
+                0x1a0051a8                remove
  .text._do_fflush
-                0x1a0051c4       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_do_fflush.o)
-                0x1a0051c4                _do_fflush
+                0x1a0051bc       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(_do_fflush.o)
+                0x1a0051bc                _do_fflush
  .text.__aeabi_division_uldivmod
-                0x1a005204      0x174 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(division_64.o)
-                0x1a005204                __aeabi_uldivmod
-                0x1a005208                __bhs_ldivmod1
+                0x1a0051fc      0x174 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(division_64.o)
+                0x1a0051fc                __aeabi_uldivmod
+                0x1a005200                __bhs_ldivmod1
  .text.__aeabi_division_idiv0
-                0x1a005378        0x2 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(division_idiv0.o)
-                0x1a005378                __aeabi_idiv0
- *fill*         0x1a00537a        0x2 ff
+                0x1a005370        0x2 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(division_idiv0.o)
+                0x1a005370                __aeabi_idiv0
+ *fill*         0x1a005372        0x2 ff
  .text.__aeabi_dmul
-                0x1a00537c      0x114 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
-                0x1a00537c                __aeabi_dmul
+                0x1a005374      0x114 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
+                0x1a005374                __aeabi_dmul
  .text.__aeabi_ddiv
-                0x1a005490      0x150 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
-                0x1a005490                __aeabi_ddiv
+                0x1a005488      0x150 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
+                0x1a005488                __aeabi_ddiv
  .text.__aeabi_dsub
-                0x1a0055e0      0x1ac c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
-                0x1a0055e0                __aeabi_dsub
+                0x1a0055d8      0x1ac c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
+                0x1a0055d8                __aeabi_dsub
  .text.__aeabi_dadd
-                0x1a00578c      0x114 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
-                0x1a00578c                __aeabi_dadd
+                0x1a005784      0x114 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
+                0x1a005784                __aeabi_dadd
  .text.__aeabi_d2iz
-                0x1a0058a0       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
-                0x1a0058a0                __aeabi_d2iz
+                0x1a005898       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
+                0x1a005898                __aeabi_d2iz
  .text.__bhs_ui2d
-                0x1a0058e0       0x46 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
-                0x1a0058e0                __bhs_ui2d
+                0x1a0058d8       0x46 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
+                0x1a0058d8                __bhs_ui2d
  .text.__aeabi_i2d
-                0x1a005926       0x12 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
-                0x1a005926                __aeabi_i2d
+                0x1a00591e       0x12 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
+                0x1a00591e                __aeabi_i2d
  .text.__aeabi_dcmpeq
-                0x1a005938       0x2e c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
-                0x1a005938                __aeabi_dcmpeq
+                0x1a005930       0x2e c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
+                0x1a005930                __aeabi_dcmpeq
  .text.__aeabi_dcmplt
-                0x1a005966       0x56 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
-                0x1a005966                __aeabi_dcmplt
+                0x1a00595e       0x56 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
+                0x1a00595e                __aeabi_dcmplt
  .text.__aeabi_dcmple
-                0x1a0059bc       0x56 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
-                0x1a0059bc                __aeabi_dcmple
+                0x1a0059b4       0x56 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
+                0x1a0059b4                __aeabi_dcmple
  .text.__aeabi_dcmpge
-                0x1a005a12       0x5c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
-                0x1a005a12                __aeabi_dcmpge
+                0x1a005a0a       0x5c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(double.o)
+                0x1a005a0a                __aeabi_dcmpge
  .text.__aeabi_memcpy
-                0x1a005a6e       0x34 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(memcpy.o)
-                0x1a005a6e                __aeabi_memcpy
-                0x1a005a78                __aeabi_memcpy8
-                0x1a005a78                __aeabi_memcpy4
+                0x1a005a66       0x34 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(memcpy.o)
+                0x1a005a66                __aeabi_memcpy
+                0x1a005a70                __aeabi_memcpy8
+                0x1a005a70                __aeabi_memcpy4
  .text.__aeabi_memset_lowlevel
-                0x1a005aa2       0x32 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(memcpy.o)
-                0x1a005aa2                __aeabi_lowlevel_memset
+                0x1a005a9a       0x32 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/softfp\libcr_eabihelpers.a(memcpy.o)
+                0x1a005a9a                __aeabi_lowlevel_memset
  .text.__sys_appexit
-                0x1a005ad4        0x2 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__sys_appexit.o)
-                0x1a005ad4                __sys_appexit
-                0x1a005ad4                __exit
+                0x1a005acc        0x2 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__sys_appexit.o)
+                0x1a005acc                __sys_appexit
+                0x1a005acc                __exit
  .text.__sys_close
-                0x1a005ad6        0x6 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__sys_close.o)
-                0x1a005ad6                __sys_close
+                0x1a005ace        0x6 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__sys_close.o)
+                0x1a005ace                __sys_close
  .text.__sys_flen
-                0x1a005adc        0x6 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__sys_flen.o)
-                0x1a005adc                __sys_flen
+                0x1a005ad4        0x6 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__sys_flen.o)
+                0x1a005ad4                __sys_flen
  .text.__sys_istty
-                0x1a005ae2        0x6 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__sys_istty.o)
-                0x1a005ae2                __sys_istty
+                0x1a005ada        0x6 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__sys_istty.o)
+                0x1a005ada                __sys_istty
  .text.__sys_remove
-                0x1a005ae8        0x6 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__sys_remove.o)
-                0x1a005ae8                __sys_remove
+                0x1a005ae0        0x6 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__sys_remove.o)
+                0x1a005ae0                __sys_remove
  .text.__sys_seek
-                0x1a005aee        0x6 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__sys_seek.o)
-                0x1a005aee                __sys_seek
+                0x1a005ae6        0x6 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__sys_seek.o)
+                0x1a005ae6                __sys_seek
  .text.__sys_tmpnam
-                0x1a005af4        0x6 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__sys_tmpnam.o)
-                0x1a005af4                __sys_tmpnam
+                0x1a005aec        0x6 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__sys_tmpnam.o)
+                0x1a005aec                __sys_tmpnam
  *(.rodata .rodata.* .constdata .constdata.*)
- *fill*         0x1a005afa        0x2 ff
- .rodata        0x1a005afc        0x5 ./freertos/src/tasks.o
- *fill*         0x1a005b01        0x3 ff
- .rodata        0x1a005b04      0x106 ./example/src/freertos_app.o
- *fill*         0x1a005c0a        0x2 ff
+ *fill*         0x1a005af2        0x2 ff
+ .rodata        0x1a005af4        0x5 ./freertos/src/tasks.o
+ *fill*         0x1a005af9        0x3 ff
+ .rodata        0x1a005afc       0xd2 ./example/src/freertos_app.o
+ *fill*         0x1a005bce        0x2 ff
  .rodata.ExtRateIn
-                0x1a005c0c        0x4 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a005c0c                ExtRateIn
+                0x1a005bd0        0x4 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a005bd0                ExtRateIn
  .rodata.OscRateIn
-                0x1a005c10        0x4 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a005c10                OscRateIn
+                0x1a005bd4        0x4 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a005bd4                OscRateIn
  .rodata.gpioLEDBits
-                0x1a005c14        0xc C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a005bd8        0xc C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .rodata.gpioButtonBits
-                0x1a005c20        0x8 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a005be4        0x8 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .rodata.InitClkStates
-                0x1a005c28        0xc C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a005bec        0xc C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .rodata.pinmuxing
-                0x1a005c34       0x2c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a005bf8       0x2c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .rodata.periph_to_base
-                0x1a005c60       0x6c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .rodata        0x1a005ccc        0xa C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
- *fill*         0x1a005cd6        0x2 ff
+                0x1a005c24       0x6c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .rodata        0x1a005c90        0xa C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ *fill*         0x1a005c9a        0x2 ff
  .rodata.InitClkStates
-                0x1a005cd8       0x48 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a005c9c       0x48 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .rodata.UART_PClock
-                0x1a005d20        0x8 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a005ce4        0x8 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .rodata.UART_BClock
-                0x1a005d28        0x8 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a005cec        0x8 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .rodata._Csys_alloc.str1.1
-                0x1a005d30       0x18 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(alloc.o)
+                0x1a005cf4       0x18 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(alloc.o)
  .rodata.fp_display.str1.1
-                0x1a005d48       0x34 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fpprintf.o)
+                0x1a005d0c       0x34 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(fpprintf.o)
                                  0x35 (size before relaxing)
  .rodata._initio.str1.1
-                0x1a005d7c        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(initio.o)
+                0x1a005d40        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(initio.o)
  .rodata.__vfprintf.str1.1
-                0x1a005d80       0x31 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(printf.o)
+                0x1a005d44       0x31 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_c.a(printf.o)
                                  0x38 (size before relaxing)
- *fill*         0x1a005db1        0x3 ff
+ *fill*         0x1a005d75        0x3 ff
  .rodata.__num_Ciob_streams
-                0x1a005db4        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__ciob.o)
-                0x1a005db4                __num_Ciob_streams
-                0x1a005db8                . = ALIGN (0x4)
+                0x1a005d78        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libcr_nohost.a(__ciob.o)
+                0x1a005d78                __num_Ciob_streams
+                0x1a005d7c                . = ALIGN (0x4)
 
-.glue_7         0x1a005db8        0x0
- .glue_7        0x1a005db8        0x0 linker stubs
+.glue_7         0x1a005d7c        0x0
+ .glue_7        0x1a005d7c        0x0 linker stubs
 
-.glue_7t        0x1a005db8        0x0
- .glue_7t       0x1a005db8        0x0 linker stubs
+.glue_7t        0x1a005d7c        0x0
+ .glue_7t       0x1a005d7c        0x0 linker stubs
 
-.vfp11_veneer   0x1a005db8        0x0
- .vfp11_veneer  0x1a005db8        0x0 linker stubs
+.vfp11_veneer   0x1a005d7c        0x0
+ .vfp11_veneer  0x1a005d7c        0x0 linker stubs
 
-.v4_bx          0x1a005db8        0x0
- .v4_bx         0x1a005db8        0x0 linker stubs
+.v4_bx          0x1a005d7c        0x0
+ .v4_bx         0x1a005d7c        0x0 linker stubs
 
-.iplt           0x1a005db8        0x0
- .iplt          0x1a005db8        0x0 ./freertos/src/FreeRTOSCommonHooks.o
+.iplt           0x1a005d7c        0x0
+ .iplt          0x1a005d7c        0x0 ./freertos/src/FreeRTOSCommonHooks.o
 
-.rel.dyn        0x1a005db8        0x0
- .rel.iplt      0x1a005db8        0x0 ./freertos/src/FreeRTOSCommonHooks.o
+.rel.dyn        0x1a005d7c        0x0
+ .rel.iplt      0x1a005d7c        0x0 ./freertos/src/FreeRTOSCommonHooks.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x1a005db8                __exidx_start = .
+                0x1a005d7c                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x1a005db8                __exidx_end = .
-                0x1a005db8                _etext = .
+                0x1a005d7c                __exidx_end = .
+                0x1a005d7c                _etext = .
 
-.data_RAM2      0x10080000        0x0 load address 0x1a005db8
+.data_RAM2      0x10080000        0x0 load address 0x1a005d7c
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM2 = .)
  *(.ramfunc.$RAM2)
@@ -4181,7 +4181,7 @@ END GROUP
                 0x10080000                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__end_data_RAM2 = .)
 
-.data_RAM3      0x20000000        0x0 load address 0x1a005db8
+.data_RAM3      0x20000000        0x0 load address 0x1a005d7c
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM3 = .)
  *(.ramfunc.$RAM3)
@@ -4193,7 +4193,7 @@ END GROUP
                 0x20000000                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__end_data_RAM3 = .)
 
-.data_RAM4      0x20008000        0x0 load address 0x1a005db8
+.data_RAM4      0x20008000        0x0 load address 0x1a005d7c
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM4 = .)
  *(.ramfunc.$RAM4)
@@ -4205,7 +4205,7 @@ END GROUP
                 0x20008000                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__end_data_RAM4 = .)
 
-.data_RAM5      0x2000c000        0x0 load address 0x1a005db8
+.data_RAM5      0x2000c000        0x0 load address 0x1a005d7c
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM5 = .)
  *(.ramfunc.$RAM5)
@@ -4224,7 +4224,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x8 load address 0x1a005db8
+.data           0x10000000        0x8 load address 0x1a005d7c
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -4240,7 +4240,7 @@ END GROUP
                 0x10000008                . = ALIGN (0x4)
                 0x10000008                _edata = .
 
-.igot.plt       0x10000008        0x0 load address 0x1a005dc0
+.igot.plt       0x10000008        0x0 load address 0x1a005d84
  .igot.plt      0x10000008        0x0 ./freertos/src/FreeRTOSCommonHooks.o
 
 .bss_RAM2       0x10080000        0x0
@@ -4398,11 +4398,11 @@ END GROUP
                 0x10008000                PROVIDE (_vStackTop = DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc32 - 0x0))
                 [!provide]                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
                 0x1a000000                _image_start = LOADADDR (.text)
-                0x1a005dc0                _image_end = (LOADADDR (.data) + SIZEOF (.data))
-                0x00005dc0                _image_size = (_image_end - _image_start)
+                0x1a005d84                _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x00005d84                _image_size = (_image_end - _image_start)
 OUTPUT(freertos_examples_10_to_16.axf elf32-littlearm)
 
-.debug_info     0x00000000     0xbf2a
+.debug_info     0x00000000     0xbf3f
  .debug_info    0x00000000      0x2f8 ./freertos/src/FreeRTOSCommonHooks.o
  .debug_info    0x000002f8      0x282 ./freertos/src/heap_3.o
  .debug_info    0x0000057a      0x44a ./freertos/src/list.o
@@ -4411,18 +4411,18 @@ OUTPUT(freertos_examples_10_to_16.axf elf32-littlearm)
  .debug_info    0x0000257f       0x85 ./freertos/src/redlib_memfix.o
  .debug_info    0x00002604     0x19b6 ./freertos/src/tasks.o
  .debug_info    0x00003fba      0x2bd ./example/src/cr_startup_lpc43xx.o
- .debug_info    0x00004277      0xdf0 ./example/src/freertos_app.o
- .debug_info    0x00005067      0x250 ./example/src/sysinit.o
- .debug_info    0x000052b7     0x1c70 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_info    0x00006f27      0xd0c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- .debug_info    0x00007c33      0xacc C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(chip_18xx_43xx.o)
- .debug_info    0x000086ff     0x16c2 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .debug_info    0x00009dc1      0x164 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(fpu_init.o)
- .debug_info    0x00009f25      0x4a4 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(gpio_18xx_43xx.o)
- .debug_info    0x0000a3c9      0x99f C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
- .debug_info    0x0000ad68     0x11c2 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_info    0x00004277      0xe05 ./example/src/freertos_app.o
+ .debug_info    0x0000507c      0x250 ./example/src/sysinit.o
+ .debug_info    0x000052cc     0x1c70 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_info    0x00006f3c      0xd0c C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_info    0x00007c48      0xacc C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_info    0x00008714     0x16c2 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_info    0x00009dd6      0x164 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(fpu_init.o)
+ .debug_info    0x00009f3a      0x4a4 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_info    0x0000a3de      0x99f C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_info    0x0000ad7d     0x11c2 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_abbrev   0x00000000     0x21c2
+.debug_abbrev   0x00000000     0x220d
  .debug_abbrev  0x00000000      0x181 ./freertos/src/FreeRTOSCommonHooks.o
  .debug_abbrev  0x00000181      0x12b ./freertos/src/heap_3.o
  .debug_abbrev  0x000002ac      0x136 ./freertos/src/list.o
@@ -4431,16 +4431,16 @@ OUTPUT(freertos_examples_10_to_16.axf elf32-littlearm)
  .debug_abbrev  0x00000874       0x85 ./freertos/src/redlib_memfix.o
  .debug_abbrev  0x000008f9      0x2c9 ./freertos/src/tasks.o
  .debug_abbrev  0x00000bc2      0x120 ./example/src/cr_startup_lpc43xx.o
- .debug_abbrev  0x00000ce2      0x275 ./example/src/freertos_app.o
- .debug_abbrev  0x00000f57       0xeb ./example/src/sysinit.o
- .debug_abbrev  0x00001042      0x3b0 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_abbrev  0x000013f2      0x1f9 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- .debug_abbrev  0x000015eb      0x19b C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(chip_18xx_43xx.o)
- .debug_abbrev  0x00001786      0x31b C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .debug_abbrev  0x00001aa1       0xb4 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(fpu_init.o)
- .debug_abbrev  0x00001b55      0x165 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(gpio_18xx_43xx.o)
- .debug_abbrev  0x00001cba      0x1d1 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
- .debug_abbrev  0x00001e8b      0x337 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_abbrev  0x00000ce2      0x2c0 ./example/src/freertos_app.o
+ .debug_abbrev  0x00000fa2       0xeb ./example/src/sysinit.o
+ .debug_abbrev  0x0000108d      0x3b0 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_abbrev  0x0000143d      0x1f9 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_abbrev  0x00001636      0x19b C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_abbrev  0x000017d1      0x31b C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_abbrev  0x00001aec       0xb4 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(fpu_init.o)
+ .debug_abbrev  0x00001ba0      0x165 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_abbrev  0x00001d05      0x1d1 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_abbrev  0x00001ed6      0x337 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
 .debug_aranges  0x00000000      0xa10
  .debug_aranges
@@ -4500,7 +4500,7 @@ OUTPUT(freertos_examples_10_to_16.axf elf32-littlearm)
  .debug_ranges  0x000007c0       0x40 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .debug_ranges  0x00000800      0x120 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_macro    0x00000000     0x94cd
+.debug_macro    0x00000000     0x94a3
  .debug_macro   0x00000000      0x39b ./freertos/src/FreeRTOSCommonHooks.o
  .debug_macro   0x0000039b      0xab4 ./freertos/src/FreeRTOSCommonHooks.o
  .debug_macro   0x00000e4f       0x10 ./freertos/src/FreeRTOSCommonHooks.o
@@ -4573,27 +4573,26 @@ OUTPUT(freertos_examples_10_to_16.axf elf32-littlearm)
  .debug_macro   0x00006403      0x43c ./freertos/src/tasks.o
  .debug_macro   0x0000683f       0x16 ./freertos/src/tasks.o
  .debug_macro   0x00006855       0x1d ./example/src/cr_startup_lpc43xx.o
- .debug_macro   0x00006872      0x3d8 ./example/src/freertos_app.o
- .debug_macro   0x00006c4a       0x7b ./example/src/freertos_app.o
- .debug_macro   0x00006cc5       0x18 ./example/src/freertos_app.o
- .debug_macro   0x00006cdd       0x10 ./example/src/freertos_app.o
- .debug_macro   0x00006ced       0xf5 ./example/src/freertos_app.o
- .debug_macro   0x00006de2       0x7e ./example/src/freertos_app.o
- .debug_macro   0x00006e60       0x1c ./example/src/freertos_app.o
- .debug_macro   0x00006e7c      0x310 ./example/src/sysinit.o
- .debug_macro   0x0000718c      0x336 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x000074c2      0xaa8 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x00007f6a       0x12 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x00007f7c      0x339 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x000082b5      0x310 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- .debug_macro   0x000085c5      0x2da C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(chip_18xx_43xx.o)
- .debug_macro   0x0000889f      0x2e0 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .debug_macro   0x00008b7f       0xc0 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(fpu_init.o)
- .debug_macro   0x00008c3f      0x2da C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(gpio_18xx_43xx.o)
- .debug_macro   0x00008f19      0x2da C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
- .debug_macro   0x000091f3      0x2da C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_macro   0x00006872      0x3ca ./example/src/freertos_app.o
+ .debug_macro   0x00006c3c       0x7b ./example/src/freertos_app.o
+ .debug_macro   0x00006cb7       0x18 ./example/src/freertos_app.o
+ .debug_macro   0x00006ccf       0x10 ./example/src/freertos_app.o
+ .debug_macro   0x00006cdf       0xf5 ./example/src/freertos_app.o
+ .debug_macro   0x00006dd4       0x7e ./example/src/freertos_app.o
+ .debug_macro   0x00006e52      0x310 ./example/src/sysinit.o
+ .debug_macro   0x00007162      0x336 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x00007498      0xaa8 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x00007f40       0x12 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x00007f52      0x339 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x0000828b      0x310 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_macro   0x0000859b      0x2da C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_macro   0x00008875      0x2e0 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_macro   0x00008b55       0xc0 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(fpu_init.o)
+ .debug_macro   0x00008c15      0x2da C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_macro   0x00008eef      0x2da C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_macro   0x000091c9      0x2da C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_line     0x00000000     0xa76c
+.debug_line     0x00000000     0xa778
  .debug_line    0x00000000      0x8a8 ./freertos/src/FreeRTOSCommonHooks.o
  .debug_line    0x000008a8      0x84a ./freertos/src/heap_3.o
  .debug_line    0x000010f2      0x911 ./freertos/src/list.o
@@ -4602,18 +4601,18 @@ OUTPUT(freertos_examples_10_to_16.axf elf32-littlearm)
  .debug_line    0x00003470       0x60 ./freertos/src/redlib_memfix.o
  .debug_line    0x000034d0     0x1645 ./freertos/src/tasks.o
  .debug_line    0x00004b15      0x1aa ./example/src/cr_startup_lpc43xx.o
- .debug_line    0x00004cbf      0xa08 ./example/src/freertos_app.o
- .debug_line    0x000056c7      0x6e5 ./example/src/sysinit.o
- .debug_line    0x00005dac      0xcd0 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_line    0x00006a7c      0x7e6 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- .debug_line    0x00007262      0x6ff C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(chip_18xx_43xx.o)
- .debug_line    0x00007961      0xffe C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .debug_line    0x0000895f      0x296 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(fpu_init.o)
- .debug_line    0x00008bf5      0x782 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(gpio_18xx_43xx.o)
- .debug_line    0x00009377      0x7fc C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
- .debug_line    0x00009b73      0xbf9 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_line    0x00004cbf      0xa14 ./example/src/freertos_app.o
+ .debug_line    0x000056d3      0x6e5 ./example/src/sysinit.o
+ .debug_line    0x00005db8      0xcd0 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_line    0x00006a88      0x7e6 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_line    0x0000726e      0x6ff C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_line    0x0000796d      0xffe C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_line    0x0000896b      0x296 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(fpu_init.o)
+ .debug_line    0x00008c01      0x782 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_line    0x00009383      0x7fc C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_line    0x00009b7f      0xbf9 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_str      0x00000000    0x1fca3
+.debug_str      0x00000000    0x1fca5
  .debug_str     0x00000000    0x1896f ./freertos/src/FreeRTOSCommonHooks.o
                               0x18a96 (size before relaxing)
  .debug_str     0x0001896f      0x103 ./freertos/src/heap_3.o
@@ -4630,25 +4629,25 @@ OUTPUT(freertos_examples_10_to_16.axf elf32-littlearm)
                               0x1acec (size before relaxing)
  .debug_str     0x0001c536      0x1cf ./example/src/cr_startup_lpc43xx.o
                                0x302d (size before relaxing)
- .debug_str     0x0001c705      0xda1 ./example/src/freertos_app.o
-                              0x1ac80 (size before relaxing)
- .debug_str     0x0001d4a6       0x23 ./example/src/sysinit.o
+ .debug_str     0x0001c705      0xda3 ./example/src/freertos_app.o
+                              0x1ac14 (size before relaxing)
+ .debug_str     0x0001d4a8       0x23 ./example/src/sysinit.o
                               0x161e3 (size before relaxing)
- .debug_str     0x0001d4c9     0x1a33 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_str     0x0001d4cb     0x1a33 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board.o)
                               0x18659 (size before relaxing)
- .debug_str     0x0001eefc      0x125 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_str     0x0001eefe      0x125 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_board_nxp_lpcxpresso_4337\Debug\liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
                               0x16f6f (size before relaxing)
- .debug_str     0x0001f021       0xea C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_str     0x0001f023       0xea C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(chip_18xx_43xx.o)
                               0x16620 (size before relaxing)
- .debug_str     0x0001f10b      0x5e7 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_str     0x0001f10d      0x5e7 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(clock_18xx_43xx.o)
                               0x16b9f (size before relaxing)
- .debug_str     0x0001f6f2       0xb5 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(fpu_init.o)
+ .debug_str     0x0001f6f4       0xb5 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(fpu_init.o)
                                0xa1a5 (size before relaxing)
- .debug_str     0x0001f7a7       0xe4 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_str     0x0001f7a9       0xe4 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(gpio_18xx_43xx.o)
                               0x15a32 (size before relaxing)
- .debug_str     0x0001f88b       0xb4 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_str     0x0001f88d       0xb4 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
                               0x165ff (size before relaxing)
- .debug_str     0x0001f93f      0x364 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_str     0x0001f941      0x364 C:\Users\Admin\Documents\git\embebidos\TP3_embebidos\lpc_chip_43xx\Debug\liblpc_chip_43xx.a(uart_18xx_43xx.o)
                               0x16763 (size before relaxing)
 
 .comment        0x00000000       0x75

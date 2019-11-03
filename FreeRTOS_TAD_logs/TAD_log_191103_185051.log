@@ -1,0 +1,40 @@
+"FreeRTOS Task Aware Debugger for GDB" version 11.0.1 (201907311258)
+(c) 2016-2018 NXP Semiconductors, Inc.
+==================================
+18:49:18.769 INFO: [TadModel] DSF session ID 55 has started.
+18:49:26.924 INFO: [TadState] TAD state changed:  DEBUG_STARTED -> DEBUG_INIT_0 (SUSPENDED, USER_REQUEST)
+18:49:35.504 INFO: [TadState] TAD state changed:  DEBUG_INIT_0 -> DEBUG_INIT_1 (RESUMED, USER_REQUEST)
+18:49:35.724 INFO: [TadState] TAD state changed:  DEBUG_INIT_1 -> DEBUG_SUSPENDED (SUSPENDED, BREAKPOINT)
+18:49:40.354 INFO: [TadState] TAD state changed:  DEBUG_SUSPENDED -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+18:49:40.996 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+18:49:44.205 INFO: [Benchmark] Loading data for "Determine FreeRTOS version" has started.
+18:49:44.220 ERROR: [VariableReader] Could not read variable expression: "&(FreeRTOSDebugConfig)".
+18:49:44.234 ERROR: [VariableReader] Could not read variable expression: "sizeof(struct TaskControlBlock_t)".
+18:49:44.267 INFO: [TadModel] FreeRTOS version has been identified from available FreeRTOS symbols as 10.0.
+18:49:44.268 INFO: [Benchmark] Loading data for "Determine FreeRTOS version" took 63 ms.
+18:49:44.268 INFO: [Benchmark] Loading data for "Queue List" has started.
+18:49:44.279 ERROR: [VariableReader] Could not read variable expression: "sizeof(xQueueRegistry)".
+18:49:44.280 ERROR: [QueueFactory] Queue registry size is zero! Each queue must be registered with vQueueAddToRegistry() and configQUEUE_REGISTRY_SIZE macro 
+must be greater than zero (found in FreeRTOSConfig.h)
+18:49:44.282 INFO: [Benchmark] Loading data for "Queue List" took 13 ms.
+18:49:55.931 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+18:49:56.793 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+18:49:56.794 INFO: [Benchmark] Loading data for "Queue List" has started.
+18:49:56.794 INFO: [Benchmark] Loaded data for "Queue List" from cache.
+18:49:59.563 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+18:50:00.160 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+18:50:00.161 INFO: [Benchmark] Loading data for "Queue List" has started.
+18:50:00.161 INFO: [Benchmark] Loaded data for "Queue List" from cache.
+18:50:07.223 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+18:50:07.988 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+18:50:08.488 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+18:50:09.182 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+18:50:23.884 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+18:50:24.119 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+18:50:24.998 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+18:50:25.672 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+18:50:28.346 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+18:50:28.770 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+18:50:30.578 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+18:50:31.01 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+18:50:51.908 INFO: [TadModel] DSF session ID 55 has ended.
