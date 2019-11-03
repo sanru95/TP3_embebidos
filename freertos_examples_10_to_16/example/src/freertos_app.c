@@ -5,7 +5,7 @@
 #include "queue.h"
 #include "semphr.h"
 
-#define APP (2)
+#define APP (3)
 
 
 /* Sets up system hardware */
@@ -153,6 +153,8 @@ int main(void)
 {
 	/* Sets up system hardware */
 	prvSetupHardware();
+
+	DEBUGOUT("Init application 1\r\n");
 
     vSemaphoreCreateBinary(xBinarySemaphore);
     xQueue = xQueueCreate(5, sizeof(long));
@@ -316,6 +318,8 @@ int main(void)
 	/* Sets up system hardware */
 	prvSetupHardware();
 
+	DEBUGOUT("Init application 2\r\n");
+
     vSemaphoreCreateBinary(xBinarySemaphore);
     xQueue = xQueueCreate(5, sizeof(long));
 
@@ -353,4 +357,86 @@ int main(void)
 
 #if (APP == 3)
 
+const char *pcTextForTask1 = "Task 1 is running\r\n";
+const char *pcTextForTask2 = "Task 2 is running\r\n";
+const char *pcTextForTask3 = "Task 3 is running\r\n";
+
+xSemaphoreHandle xMutex;
+
+/* The task function. */
+static void vTaskFunction(void *pvParameters);
+
+
+/* UART (or output) & LED toggle thread */
+static void vTaskFunction(void *pvParameters) {
+	char *pcTaskName;
+
+	/* The string to print out is passed in via the parameter.  Cast this to a
+	 * character pointer. */
+	pcTaskName = (char *) pvParameters;
+
+	/* As per most tasks, this task is implemented in an infinite loop. */
+	while (1) {
+		/* Print out the name of this task. */
+
+		xSemaphoreTake(xMutex, portMAX_DELAY);
+
+		DEBUGOUT(pcTaskName);
+
+		DEBUGOUT("LED ON\r\n");
+		Board_LED_Set(LED3, LED_ON);
+
+		/* Delay for a period.  This time we use a call to vTaskDelay() which
+		 * puts the task into the Blocked state until the delay period has expired.
+		 * The delay period is specified in 'ticks'. */
+		vTaskDelay(500 / portTICK_RATE_MS);
+
+		Board_LED_Set(LED3, LED_OFF);
+		DEBUGOUT("LED OFF\r\n");
+
+		vTaskDelay(500 / portTICK_RATE_MS);
+
+
+		xSemaphoreGive(xMutex);
+		taskYIELD();
+	}
+}
+
+
+/*****************************************************************************
+ * Public functions
+ ****************************************************************************/
+/**
+ * @brief	main routine for FreeRTOS example 4 - Using the Blocked state to create delay
+ * @return	Nothing, function should not exit
+ */
+int main(void)
+{
+	/* Sets up system hardware */
+	prvSetupHardware();
+
+	DEBUGOUT("Init application 3\r\n");
+
+	xMutex = xSemaphoreCreateMutex();
+
+	xTaskCreate(vTaskFunction, (char *) "Task1", configMINIMAL_STACK_SIZE,
+				(void *) pcTextForTask1, (tskIDLE_PRIORITY + 1UL), (xTaskHandle *) NULL);
+
+	xTaskCreate(vTaskFunction, (char *) "Task2", configMINIMAL_STACK_SIZE,
+				(void *) pcTextForTask2, (tskIDLE_PRIORITY + 1UL), (xTaskHandle *) NULL);
+
+	xTaskCreate(vTaskFunction, (char *) "Task3", configMINIMAL_STACK_SIZE,
+				(void *) pcTextForTask3, (tskIDLE_PRIORITY + 1UL), (xTaskHandle *) NULL);
+
+	/* Start the scheduler */
+	vTaskStartScheduler();
+
+	/* If all is well we will never reach here as the scheduler will now be
+	 * running.  If we do reach here then it is likely that there was insufficient
+	 * heap available for the idle task to be created. */
+	while (1);
+
+	/* Should never arrive here */
+	return ((int) NULL);
+}
 #endif

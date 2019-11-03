@@ -232,3 +232,17 @@ La aplicación es similar a la anterior, con la diferencia fundamental que la Ta
 El reusltado por consola es el siguiente:
 
 ![](imagenes/app2a.PNG) 
+
+## Aplicación 3
+
+En la siguiente aplicación se tiene el siguiente diagrama temporal:
+
+![](imagenes/app3.PNG)
+
+Se crean tres tares con la misma prioridad que quieren utilizar un recurso en comun (LED + UART). Se les asigna la misma prioridad para que las 3 tengan la misma oportunidad de acceder el recurso. Cada tarea desea hacer encender durante 500 mS y apagar durante 500mS al LED e imprimir por consola su estado. Las tres tareas se crean desde el mismo prototipo, pasandoles distintos paràmetros. 
+
+Se protege el recurso utilizando un Mutex que se toma al comenzar la tarea si se puede, se prende el LED, se tiene una demora (vTaskDelay) de 500ms, se apaga el LED, se tiene una demora igual y se suelta el Mutex.
+
+Las tres tareas ciclan el uso del LED como se observa en la consola:
+
+![](imagenes/app3a.PNG)
