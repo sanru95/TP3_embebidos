@@ -3,8 +3,8 @@ core_cm4.h:1508:22:NVIC_SetPendingIRQ	16	static
 core_cm4.h:1520:22:NVIC_ClearPendingIRQ	16	static
 core_cm4.h:1550:22:NVIC_SetPriority	16	static
 freertos_examples_10_to_16.c:61:13:prvSetupHardware	8	static
-freertos_examples_10_to_16.c:431:13:vHandlerTask	16	static
-freertos_examples_10_to_16.c:456:13:vPeriodicTask	16	static
-freertos_examples_10_to_16.c:473:13:prvSetupSoftwareInterrupt	8	static
-freertos_examples_10_to_16.c:485:6:DAC_IRQHandler	16	static
-freertos_examples_10_to_16.c:517:5:main	24	static
+freertos_examples_10_to_16.c:786:13:vIntegerGenerator	32	static
+freertos_examples_10_to_16.c:820:13:vStringPrinter	24	static
+freertos_examples_10_to_16.c:835:13:prvSetupSoftwareInterrupt	8	static
+freertos_examples_10_to_16.c:847:6:DAC_IRQHandler	16	static
+freertos_examples_10_to_16.c:896:5:main	24	static

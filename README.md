@@ -139,3 +139,28 @@ El resultado por consola es el siguiente:
 
 ![](imagenes/ej12a.PNG) 
 
+### Ejemplo 13
+
+En este ejemplo se sincroniza una interrupción con una tarea gracias a un semaforo contador
+
+![](imagenes/ej12.PNG) 
+
+Este ejercicio es similar al anterior, con la diferencia que en la ISR se prenden tres veces el semaforo contador, con xSemaphoreGiveFromISR(). De esta manera, cuando se vuelve de la ISR se puede procesar los tres casos con la Tarea Handler
+El resultado por consola es el siguiente:
+
+![](imagenes/ej13a.PNG) 
+
+# Ejemplo 14
+
+Este ejemplo es similar al anterior.
+
+![](imagenes/ej14.PNG) 
+
+Se utilizan dos colas, una que guarda string y otra enteros. Al igual que en el ejemplo 13, la Tarea StringPrinter se bloquea hasta recibir algo por la cola de strings. La Tarea IntegerGenerator cada 200mS coloca 5 numeros en la cola y genera una interrupcion. En la ISR de la misma, se procen estos numeros y se envia con xQueueSendToBackFromISR() strings a la cola de strings. Es entonces que se desbloquea la Tarea StringPrinter y se imprimen los mensajes por consola.
+
+EL resultado de la consola es el siguiente:
+ 
+![](imagenes/ej14a.PNG) 
+
+## Ejemplo 15
+
