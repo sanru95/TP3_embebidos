@@ -127,3 +127,15 @@ Este ejercicio es similar al anterior, sin embargo ahora las Tareas Sender tiene
 El resultado por pantalla es el siguiente:
 
 ![](imagenes/ej11a.PNG) 
+
+### Ejemplo 12
+
+En este ejemplo se sincroniza una interrupción con una tarea gracias a un semaforo binario
+
+![](imagenes/ej12.PNG) 
+
+Para generar una interrupción se llama a una tare periódica que simula eventos del mundo real. Esta tarea (Tarea Periodic) tiene un delay de 500ms y genera una interrupción, cuyo ISR prende el semaforo con la función xSemaphoreGiveFromISR(). Luego hay otra tarea, Tarea Handler, la cual se encuentra en BLOCKED hasta que se prenda el semaforo, momento en el que lo apaga e imprime un mensaje.
+El resultado por consola es el siguiente:
+
+![](imagenes/ej12a.PNG) 
+
