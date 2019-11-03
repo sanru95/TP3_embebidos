@@ -2,6 +2,10 @@
 
 ## 1- Archivos y tipos de datos
 
+### Archivos
+
+![](imagenes/archivos.PNG)  
+
 ### Funciones
 
 | Función               | Archivo                    | Descripción                                                                                       | Hardware              |
