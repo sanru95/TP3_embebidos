@@ -5,16 +5,19 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../example/src/cr_startup_lpc43xx.c \
+../example/src/freertos_app.c \
 ../example/src/freertos_examples_10_to_16.c \
 ../example/src/sysinit.c 
 
 OBJS += \
 ./example/src/cr_startup_lpc43xx.o \
+./example/src/freertos_app.o \
 ./example/src/freertos_examples_10_to_16.o \
 ./example/src/sysinit.o 
 
 C_DEPS += \
 ./example/src/cr_startup_lpc43xx.d \
+./example/src/freertos_app.d \
 ./example/src/freertos_examples_10_to_16.d \
 ./example/src/sysinit.d 
 

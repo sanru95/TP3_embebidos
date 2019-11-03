@@ -47,7 +47,7 @@
 #define EXAMPLE_15 (15)		/* Re-writing vPrintString() to use a semaphore */
 #define EXAMPLE_16 (16)		/* Re-writing vPrintString() to use a gatekeeper task */
 
-#define TEST (EXAMPLE_16)
+#define TEST (0)
 
 /*****************************************************************************
  * Public types/enumerations/variables

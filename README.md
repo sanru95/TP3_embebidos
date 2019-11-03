@@ -150,7 +150,7 @@ El resultado por consola es el siguiente:
 
 ![](imagenes/ej13a.PNG) 
 
-# Ejemplo 14
+### Ejemplo 14
 
 Este ejemplo es similar al anterior.
 
@@ -184,4 +184,16 @@ El resultado por consola es el siguiente:
 
 ![](imagenes/ej16a.PNG) 
 
+## Aplicación 1
 
+En la siguiente aplicación se tiene el siguiente diagrama temporal:
+
+![](imagenes/app1.PNG) 
+
+Se crean tres tareas, de las cuales la Tarea 1 es la periodida. A esta se le asigna a la mayor prioridad, mientras que las otras dos estan al mismo nivel. La Tarea 1 genera un interrupcion cada 500mS. En este interrupcion se da un semaforo binario, el cual desbloquea la Tarea 2. Esta agrega un valor a la cola que desbloquea la Tarea 3, la cual imprime por consola el valor.
+
+El reusltado por consola es el siguiente:
+
+![](imagenes/app1a.PNG) 
+
+## Aplicación 2
